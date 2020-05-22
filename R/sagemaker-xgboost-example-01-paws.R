@@ -121,7 +121,7 @@ fwrite(cbind(validation_data[,'y_yes'], validation_data[,-c('y_no', 'y_yes')]), 
 
 # Send train and validation to AWS S3
 obj <- readBin("train.csv", "raw", n = file.size("train.csv"))
-paws::s3()$put_objet(Body = obj, Bucket = bucket, Key = file.path(prefix, 'train/train.csv'))
+paws::s3()$put_object(Body = obj, Bucket = bucket, Key = file.path(prefix, 'train/train.csv'))
 obj <- readBin("validation.csv", "raw", n = file.size("validation.csv"))
 paws::s3()$put_object(Body = obj, Bucket = bucket, Key = file.path(prefix, 'validation/validation.csv'))
 
