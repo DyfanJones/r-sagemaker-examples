@@ -73,7 +73,6 @@ my_region <- paws.common:::get_region()
 # <account id>.dkr.ecr.<region>.amazonaws.com/sagemaker-<model>:<version>-cpu-py<python version>'
 # more information go to: https://docs.aws.amazon.com/sagemaker/latest/dg/pre-built-docker-containers-frameworks.html
 
-
 # This is the docker image for xgboost on the eu-west-1 region
 xgb_img = '141502667606.dkr.ecr.eu-west-1.amazonaws.com/sagemaker-xgboost:1.0-1-cpu-py3' 
 
@@ -87,7 +86,6 @@ unzip("bank-addition.zip")
 
 # read in data
 data = fread("bank-additional/bank-additional-full.csv")
-
 
 ###################################################
 # Explore and transform
